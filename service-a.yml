@@ -14,7 +14,7 @@ spring:
       bindings:
         output:
           binder: kafka
-            destination: cloudEX
+          destination: cloudEX
 management:
   security: 
     enabled: false
