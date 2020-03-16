@@ -1,0 +1,15 @@
+server:
+  port: 8001
+  
+spring:
+  cloud:
+    consul:
+      discovery:
+        instanceId: ServiceA
+        health-check-interval: 5s
+      config:
+        management: 
+          enabled: true
+management:
+  security: 
+    enabled: false
