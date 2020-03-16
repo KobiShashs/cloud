@@ -1,15 +1,19 @@
 server:
-  port: 8811
+  port: 9911
   
 spring:
   cloud:
     consul:
       discovery:
-        instanceId: dashboard
+        instanceId: activity
         health-check-interval: 5s
       config:
         management: 
           enabled: true
+    stream:
+          bindings:
+             sink-in-0:
+                destination: cloudEX
 management:
   security: 
     enabled: false
