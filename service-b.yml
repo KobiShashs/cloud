@@ -1,11 +1,11 @@
 server:
-  port: 8002
+  port: 0
   
 spring:
   cloud:
     consul:
       discovery:
-        instanceId: serviceB
+        instanceId: ${spring.application.name}:${random.value}
         health-check-interval: 5s
       config:
         management: 
